@@ -9,10 +9,10 @@ export default function createListView(name) {
         created() {
             bus.$emit('start:spinner');
             setTimeout(() => {
-            this.$store.dispatch('FETCH_LIST', this.$route.n)
+            this.$store.dispatch('FETCH_LIST', this.$route.name)
                 .then(() => {
-                    console.log('fetched');
-                    console.log('this.$route.name= ' + this.$route.name)
+                    // console.log('fetched');
+                    // console.log('this.$route.name= ' + this.$route.name)
                     bus.$emit('end:spinner')
                 } )
                 .catch((error) => {

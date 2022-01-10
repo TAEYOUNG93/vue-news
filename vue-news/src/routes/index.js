@@ -1,11 +1,11 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-// import NewsView from '../views/NewsView.vue'
-// import AskView from '../views/AskView.vue'
-// import JobsView from '../views/JobsView.vue'
+import NewsView from '../views/NewsView.vue'
+import AskView from '../views/AskView.vue'
+import JobsView from '../views/JobsView.vue'
 import UsersView from '../views/UserView.vue'
 import ItemView from '../views/ItemView.vue'
-import createListView from '../views/CreateListView.js'
+// import createListView from '../views/CreateListView.js'
 
 
 Vue.use(VueRouter);
@@ -17,17 +17,26 @@ export const router = new VueRouter({
             path:'/',
             // component: baseUrl/:id 누공을 말씀하시는 것 같습니다
             name: 'news',
-            component: createListView('NewsView'),
+            redirect: '/news',
+            // component: createListView('NewsView'),
+        },
+        {
+            path: '/news',
+            name: 'news',         
+            component: NewsView, 
+            // component: createListView('AskView'),
         },
         {
             path: '/ask',
-            name: 'ask',          
-            component: createListView('AskView'),
+            name: 'ask',         
+            component: AskView,
+            // component: createListView('JobsView'),
         },
         {
             path: '/jobs',
             name: 'jobs',
-            component: createListView('JobsView'),
+            component: JobsView
+            // component: createListView('JobsView'),
         },
         {
             path:'/item/:id',
