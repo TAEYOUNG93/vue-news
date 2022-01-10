@@ -1,6 +1,7 @@
 import ListView from './ListView.vue';
 import bus from '../utils/bus.js'
 
+// hioder component
 export default function createListView(name) {
     return {
         // recycle component option space
@@ -8,16 +9,16 @@ export default function createListView(name) {
         created() {
             bus.$emit('start:spinner');
             setTimeout(() => {
-            this.$store.dispatch('FETCH_LIST', this.$route.name)
+            this.$store.dispatch('FETCH_LIST', this.$route.n)
                 .then(() => {
                     console.log('fetched');
                     console.log('this.$route.name= ' + this.$route.name)
-                    bus.$emit('end:spinner');
+                    bus.$emit('end:spinner')
                 } )
                 .catch((error) => {
                     console.log(error)
                 } );
-            bus.$emit('end:spinner')
+            // bus.$emit('end:spinner')
             }, 2000) 
         },
         render(createElement) {
