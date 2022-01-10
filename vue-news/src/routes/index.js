@@ -17,20 +17,16 @@ export const router = new VueRouter({
             path:'/',
             // component: baseUrl/:id 누공을 말씀하시는 것 같습니다
             name: 'news',
-            // component: url 주소로 갔을때 표시될 컴포넌트 
-            // component: NewsView,
             component: createListView('NewsView'),
         },
         {
             path: '/ask',
-            name: 'ask',
-            // component: AskView,
+            name: 'ask',          
             component: createListView('AskView'),
         },
         {
             path: '/jobs',
             name: 'jobs',
-            // component: JobsView,
             component: createListView('JobsView'),
         },
         {
