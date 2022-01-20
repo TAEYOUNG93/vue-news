@@ -1,8 +1,8 @@
 <template>
   <div class="header">
       <router-link to="/news">News</router-link> |
-      <router-link to="/ask">Ask</router-link> |
-      <router-link to="/jobs">Jobs</router-link> 
+      <router-link to="/ask">Asks</router-link> |
+      <router-link to="/jobs">Jobs</router-link>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 }
 
 .header a {
-   color: white; 
+   color: white;
 }
 
 

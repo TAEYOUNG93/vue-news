@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <tool-bar></tool-bar>
-    <transition name="page"> 
+    <transition name="page">
       <router-view></router-view>
     </transition>
     <spinner :loading="loadingStatus"></spinner>
@@ -14,7 +14,7 @@ import ToolBar from './components/Toolbar.vue'
 import bus from './utils/bus.js'
 
 export default {
-  components: { 
+  components: {
     ToolBar,
     Spinner,
    },

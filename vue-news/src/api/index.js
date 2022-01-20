@@ -17,9 +17,10 @@ function  fetchAskList() {
 }
 
 function fetchList(pageName) {
-    // console.log(`${config.baseUri}${pageName}/1.json'`)
-    return axios.get(`${config.baseUri}${pageName}/1.json'`)
-    // return axios.get(`https://api.hnpwa.com/v0/news/1.json'`)    
+    // return axios.get(`${config.baseUri}${pageName}/1.json'`)
+    console.log(config.baseUri + pageName + '/1.json');
+    return axios.get(config.baseUri + pageName + '/1.json');
+    // return axios.get('https://api.hnpwa.com/v0/news/1.json')
 }
 
 function fetchUserInfo(username) {
