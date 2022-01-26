@@ -6,6 +6,7 @@ const config = {
 
 function fetchNewsList() {
     return axios.get(config.baseUri + 'news/1.json')
+    // return new Promise();
 }
 
 function  fetchJobList() {
