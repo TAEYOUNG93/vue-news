@@ -39,9 +39,8 @@ export default {
   },
   created() {
     const id = this.$route.params.id
-    console.log(this.$route.params.id);
     this.$store.dispatch('FETCH_ITEM', id);
-    
+
   }
 
 }

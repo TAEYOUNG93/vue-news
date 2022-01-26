@@ -5,7 +5,7 @@
         <!-- point area -->
         <div class="points">
           {{ item.points || 0 }}
-        </div> 
+        </div>
         <!-- other information -->
         <div>
           <!--  title of list item area  -->
@@ -22,11 +22,10 @@
             </template>
           </p>
           <small class="link-text">
-        console.log('fetched');
-            {{ item.time_ago }} by 
+            {{ item.time_ago }} by
             <router-link v-if="item.user" v-bind:to="'/users/' +  item.user" class="link-text">
               {{ item.user }}
-            </router-link>  
+            </router-link>
             <a :href="item.url" v-else>
               {{ item.domain}}
             </a>
@@ -44,10 +43,10 @@ export default {
         // console.log('name = ' + name);
         // if(name === 'news') {
         //     this.$store.dispatch('FETCH_NEWS');
-      
+
         // } else if(name === 'ask') {
         //     this.$store.dispatch('FETCH_ASKS');
-      
+
         // } else if (name === 'jobs') {
         //     this.$store.dispatch('FETCH_JOBS');
         // }
@@ -60,16 +59,16 @@ export default {
         // // console.log('name = ' + name)
         // if(this.$route.name === 'news') {
         //   return this.$store.state.news;
-          
-        // } else if(this.$route.name === 'ask') {   
+
+        // } else if(this.$route.name === 'ask') {
         //   return this.$store.state.asks;
 
         // } else if(this.$route.name === 'jobs') {
         //   return this.$store.state.jobs;
-            
+
         // }
         // return console.log('name = ' +  name);
-        
+
       }
     }
 }
